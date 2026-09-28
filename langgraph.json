@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "multiple_mcps_tools": "./src/multiple_mcps_tools/graph/factory.py:graph"
+  },
+  "env": ".env",
+  "image_distro": "wolfi"
+}
