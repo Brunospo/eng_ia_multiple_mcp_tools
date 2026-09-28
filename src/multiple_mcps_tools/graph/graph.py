@@ -14,7 +14,9 @@ def build_chat_graph(open_router_service: OpenRouterService):
 
     workflow.add_edge(START, "intent_parser")
     workflow.add_conditional_edges(
-        "intent_parser", lambda state: END if state.get("error") else "agent"
+        "intent_parser",
+        lambda state: END if state.get("error") else "agent",
+        {"end": END, "agent": "agent"},
     )
 
     workflow.add_edge("agent", END)
