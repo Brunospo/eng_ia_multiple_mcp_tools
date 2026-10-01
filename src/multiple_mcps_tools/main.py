@@ -3,6 +3,7 @@ from pathlib import Path
 
 import uvicorn
 from fastapi.testclient import TestClient
+from rich import print
 
 from multiple_mcps_tools.server import create_app
 
