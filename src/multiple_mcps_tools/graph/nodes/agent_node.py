@@ -18,7 +18,7 @@ def agent_node(open_router_service: OpenRouterService):
                 get_system_prompt(), user_message
             )
 
-            return {"messages": AIMessage(result.get("data"))}
+            return {"messages": AIMessage(result.get("data")), "error": None}
         except Exception as error:
             print(f"Agent error: {error}")
             return {
